@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RuriORG Player Demo</title>
+  <!-- Optional external CSS for customization -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Minimal inline CSS for demonstration; these rules can be overridden */
+    .ruriorg-container {
+      border: 2px solid #333;
+      background: #111;
+    }
+    .ruriorg-controls button {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sample configuration for RuriORG. In a real project, replace sample URLs with actual files. -->
+  <script>
+    window.RuriORGConfig = {
+      // Sample HLS video (ensure CORS is enabled on the source)
+      file: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8',
+      // Sample poster image.
+      image: 'https://peach.blender.org/wp-content/uploads/title_anouncement.jpg',
+      width: 640,
+      aspectratio: '16:9',
+      // Sample subtitles VTT file (create or host your own subtitles.vtt file).
+      subtitles: {
+        src: 'subtitles.vtt',
+        srclang: 'en',
+        label: 'English'
+      },
+      // Sample preview: a VTT file mapping times to a preview sprite and the preview image.
+      preview: {
+        vtt: 'preview.vtt',
+        image: 'preview.jpg'
+      }
+    };
+  </script>
+
+  <!-- Load the RuriORG player script -->
+  <script src="index.js"></script>
+
+  <!-- Optional: load jQuery for additional customization -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
